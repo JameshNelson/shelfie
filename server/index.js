@@ -2,7 +2,8 @@ require('dotenv').config();
 
 const express = require('express'),
     shelfie_controller = require('./controller'),
-    massive = require('massive');
+    massive = require('massive'),
+    cors = require('cors');
 
     const app = express(); 
 
@@ -17,6 +18,7 @@ const express = require('express'),
     app.get('/api/inventory', shelfie_controller.getInventory);
     app.post('/api/product', shelfie_controller.postToInventory);
     app.delete(`/api/product/:id`, shelfie_controller.delete); 
+    app.put('/api/product/:id', shelfie_controller.update); 
 
  
 app.listen(SERVER_PORT, () => {

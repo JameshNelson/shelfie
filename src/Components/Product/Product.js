@@ -7,7 +7,14 @@ class Product extends Component {
 
     render(){
         return(
-            <div>Product</div>
+            <div className='product'>
+                <div className='product-img'></div>
+                <div className='product-box'>
+                    <p className='product-title'>Fish</p>
+                    <p className='product-price'>22</p>
+                </div>
+
+            </div>
         )
     }
 }
